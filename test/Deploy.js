@@ -51,9 +51,8 @@ describe("Donator contract", function(){
         const a = await donator.donaters[0];
         console.log(a);
         // const b = donator.contributors[0xccA210e7C05322379F801a07F320E863efE68f80];
-        const b = await donator.getSumOfDonater(ethers.utils.getAddress("0xccA210e7C05322379F801a07F320E863efE68f80"));
+        const b = await donator.getSumOfDonater(owner.address);
         console.log(b);
-        console.log(donator.dd);
         // тут хочу сравнить значение в мапе с тем, что отправил, но не знаю как(((((
         expect((await donator.donaters[0])).to.equal(owner.address);
     })

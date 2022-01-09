@@ -13,8 +13,6 @@ contract Donator{
     error Unauthorized();
     error NotEnoughEther();
 
-    // for test
-    int dd = 12;
 
     receive() external payable {}
     fallback() external payable {}
@@ -22,8 +20,6 @@ contract Donator{
 
     constructor(){
         owner = payable(msg.sender);
-    // for test
-        contributors[0xccA210e7C05322379F801a07F320E863efE68f80] += 1 ether ;
     }
 
     modifier onlyBy(address _account)
@@ -51,7 +47,7 @@ contract Donator{
         _to.transfer(_amount);
         emit NewTransfer(_to,_amount);
     }
-    
+    // function only for test
     function getSumOfDonater(address _of) public view returns(uint){
         return(contributors[_of]);
     }
