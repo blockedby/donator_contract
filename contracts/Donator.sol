@@ -13,12 +13,16 @@ contract Donator{
     error Unauthorized();
     error NotEnoughEther();
 
+    // for test
+    int dd = 12;
+
     receive() external payable {}
     fallback() external payable {}
 
 
     constructor(){
         owner = payable(msg.sender);
+    // for test
         contributors[0xccA210e7C05322379F801a07F320E863efE68f80] += 1 ether ;
     }
 

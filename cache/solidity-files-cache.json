@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Sergey\\Documents\\SOL\\donater\\contracts\\Donator.sol": {
-      "lastModificationDate": 1641705315254,
-      "contentHash": "eebd3ce6e3c91bb6ab736efca0b5eee7",
+      "lastModificationDate": 1641710513953,
+      "contentHash": "9d6117d3aaa6422add78f83993e9caad",
       "sourceName": "contracts/Donator.sol",
       "solcConfig": {
         "version": "0.8.11",
