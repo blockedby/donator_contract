@@ -48,6 +48,10 @@ describe("Donator contract", function(){
         await donator.connect(addr1).donate({
             value: ethers.utils.parseEther("1.0")
         });
+        const a = donator.donaters[0];
+        console.log(a);
+        const b = donator.contributors[0xccA210e7C05322379F801a07F320E863efE68f80];
+        console.log(b);
         // тут хочу сравнить значение в мапе с тем, что отправил, но не знаю как(((((
         expect((await donator.donaters[0])).to.equal(owner.address);
     })
